@@ -10,20 +10,19 @@ classroomid = 14857712  # 每一个大课的课堂编号是固定的
 starttime = datetime.datetime(2023, 9, 28, 9, 34, 47)  # 设置刷课起始时间
 random_number = random.randint(30, 40)  #设置刷课视频时间间隔，例：刷的每个视频时间间隔为三四十分钟随机
 schoolurl='changjiang.yuketang.cn'
-x_csrftoken = 'hFMN1EU2Xn4uR4D5R28QtvNx4VWZ5o9H'
-cookie = 'ogin_type=WX; django_language=zh-cn; classroomId=14857712; classroom_id=14857712; user_role=-1; JG_fcdf8e635093adde6bef42651_PV=1698137049827|1698137049827; csrftoken=hFMN1EU2Xn4uR4D5R28QtvNx4VWZ5o9H; sessionid=psqo4to6tb0wsyr085laefnasx4agyxp'
+x_csrftoken = 'hFMN1EU2Xn4u5R28QtvNx4VWZ5o9H'
+cookie = 'ogin_type=WX; django_language=zh-cn; classroomId=14857712; classroom_id=14857712; user_role=-1; JG_fcdf8e635093adde6; csrftoken=hFMN1EU2Xn4u5R28QtvNx4VWZ5o9H; sessionid=psqo4to6tb085laefnagyxp'
 
 headers = {'authority': schoolurl,
            'method': 'GET',
-           'path': '/mooc-api/v1/lms/learn/leaf_info/' + str(classroomid) + '/15745084/',  # 改视频编号
+           'path': '/mooc-api/v1/lms/learn/leaf_info/' + str(classroomid) + '/15745084/', 
            'scheme': 'https',
            'accept': 'application/json, text/plain, */*',
            'accept-encoding': 'gzip, deflate, br',
            'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
-           'classroom-id': str(classroomid),  # 换别的课手动改，一个课程内不用改
+           'classroom-id': str(classroomid),  
            'cookie': cookie,
-           'referer': 'https://'+schoolurl+'/v2/web/xcloud/video-student/' + str(classroomid) + '/15745084',
-           # 改视频编号
+           'referer': 'https://'+schoolurl+'/v2/web/xcloud/video-student/' + str(classroomid) + '/15745084', 
            'sec-ch-ua': '"Microsoft Edge";v="117", "Not;A=Brand";v="8", "Chromium";v="117"',
            'sec-ch-ua-mobile': '?0',
            'sec-ch-ua-platform': '"Windows"',
@@ -50,7 +49,6 @@ header1s = {'authority': schoolurl,
             'cookie': cookie,
             'origin': 'https://'+schoolurl,
             'referer': 'https://'+schoolurl+'/v2/web/xcloud/video-student/' + str(classroomid) + '/15745084',
-            # 改视频编号
             'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
